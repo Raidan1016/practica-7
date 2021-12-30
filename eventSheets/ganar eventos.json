@@ -1,0 +1,69 @@
+{
+	"name": "Ganar eventos",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "mouse",
+					"sid": 743890263399545,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "botonBack"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 282426886477136,
+					"parameters": {
+						"layout": "Escena 1"
+					}
+				}
+			],
+			"sid": 199228932484472
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 851192680956863
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 935392136475359
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 902367146064267,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 893966040819452,
+					"parameters": {
+						"audio-file": "ganaste",
+						"loop": "looping",
+						"volume": "10",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 136016160792364
+		}
+	],
+	"sid": 470750877299679
+}

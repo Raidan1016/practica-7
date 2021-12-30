@@ -1,0 +1,92 @@
+{
+	"name": "bat",
+	"plugin-id": "Sprite",
+	"sid": 3968161137284407,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "ratón",
+			"type": "boolean",
+			"desc": "",
+			"sid": 179893794218447
+		},
+		{
+			"name": "teclado",
+			"type": "boolean",
+			"desc": "",
+			"sid": 980842797614982
+		},
+		{
+			"name": "Puntuación",
+			"type": "number",
+			"desc": "",
+			"sid": 515570080334413
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 8713488192229468
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 6232058730256263
+		},
+		{
+			"behaviorId": "TileMovement",
+			"name": "MovimientoEnCuadrícula",
+			"sid": 709811145950689
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 104,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2075631,
+						"collisionPoly": {
+							"points": [
+								0.0384615,
+								0.166667,
+								0.5,
+								0,
+								0.961538,
+								0.166667,
+								1,
+								0.5,
+								0.971154,
+								0.875,
+								0.5,
+								1,
+								0.0288462,
+								0.875,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 3036615939279443,
+				"name": "Space",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

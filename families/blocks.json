@@ -1,0 +1,42 @@
+{
+	"name": "blocks",
+	"plugin-id": "Sprite",
+	"sid": 6556485843228128,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 3707717006583642
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"letra1Q",
+		"letra2W",
+		"letra3E",
+		"letra4R",
+		"letra5T",
+		"letra6Y",
+		"letra7U",
+		"letra8I",
+		"letra9O",
+		"letra0P",
+		"letra1A",
+		"letra2S",
+		"letra3D",
+		"letra4F",
+		"letra5G",
+		"letra6H",
+		"letra7J",
+		"letra8K",
+		"letra9L",
+		"letra2Z",
+		"letra3X",
+		"letra4C",
+		"letra5V",
+		"letra6B",
+		"letra7N",
+		"letra8M"
+	]
+}

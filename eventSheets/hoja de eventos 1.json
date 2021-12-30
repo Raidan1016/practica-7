@@ -1,0 +1,95 @@
+{
+	"name": "Hoja de eventos 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 947864504325396
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Audio",
+					"sid": 802784995874285
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 805559181737329,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 843143513398421,
+					"parameters": {
+						"audio-file": "fondo",
+						"loop": "looping",
+						"volume": "10",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 829843352028093
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "mouse",
+					"sid": 437294496445858,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "botonPlay"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 486244871466409,
+					"parameters": {
+						"layout": "Game"
+					}
+				}
+			],
+			"sid": 729513064902086
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "mouse",
+					"sid": 513557731685533,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "botonControles"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 113454566189036,
+					"parameters": {
+						"layout": "Controles"
+					}
+				}
+			],
+			"sid": 283618693617070
+		}
+	],
+	"sid": 221630225274832
+}

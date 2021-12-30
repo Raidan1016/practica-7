@@ -1,0 +1,1392 @@
+{
+	"name": "Game sheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "contador",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 469376434343345
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 546123886386778,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 813902714718039,
+					"parameters": {
+						"variable": "contador",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 115088517039819
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 401339276393910
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 338420408989711,
+					"parameters": {
+						"audio-file": "fondo",
+						"loop": "looping",
+						"volume": "5",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 925934965506418
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 485708482666219,
+					"parameters": {
+						"variable": "ratón"
+					}
+				},
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 5565983178566185
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "bat",
+					"sid": 8140160568742511,
+					"parameters": {
+						"x": "Mouse.X"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "bat2",
+					"sid": 652849633540974,
+					"parameters": {
+						"x": "Mouse.x"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "bat",
+					"sid": 228430291570500,
+					"behaviorType": "MovimientoEnCuadrícula",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 7593843529110819
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 928335813218024,
+					"parameters": {
+						"variable": "teclado"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "bat",
+					"sid": 176852330629624,
+					"behaviorType": "MovimientoEnCuadrícula",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 342495345009971,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 122207740667119,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "bat",
+							"sid": 289874465935774,
+							"behaviorType": "MovimientoEnCuadrícula",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "bat2",
+							"sid": 986693689905885,
+							"parameters": {
+								"x": "bat.X"
+							}
+						}
+					],
+					"sid": 171253624067982
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Teclado",
+							"sid": 775262451214032,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "bat",
+							"sid": 141509426544812,
+							"behaviorType": "MovimientoEnCuadrícula",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "bat2",
+							"sid": 942357484120352,
+							"parameters": {
+								"x": "bat.X"
+							}
+						}
+					],
+					"sid": 786227063542839
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "ball1",
+					"sid": 831651653082098,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "WindowHeight"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 567662640173645
+				}
+			],
+			"sid": 852093022156810
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "mouse",
+					"sid": 906131771337359,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "botonBack"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 193369682853292,
+					"parameters": {
+						"layout": "Escena 1"
+					}
+				}
+			],
+			"sid": 570331861887162
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "mouse",
+					"sid": 121229066115123,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Sprite"
+					}
+				},
+				{
+					"id": "compare-speed",
+					"objectClass": "ball1",
+					"sid": 441973029969583,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"comparison": 0,
+						"speed": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "botonBack",
+					"sid": 529092813784118
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Sprite",
+					"sid": 988902445906229
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "ball1",
+					"sid": 655183820754614,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "400"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "ball1",
+					"sid": 2845181086970415,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "90"
+					}
+				}
+			],
+			"sid": 6240398254254679
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 703333287439293,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "compare-speed",
+					"objectClass": "ball1",
+					"sid": 967606244284769,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"comparison": 0,
+						"speed": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "botonBack",
+					"sid": 753783988337301
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Sprite",
+					"sid": 743058980205999
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "ball1",
+					"sid": 457516226208740,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "400"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "ball1",
+					"sid": 834983487640642,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "90"
+					}
+				}
+			],
+			"sid": 980709295352947
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 765160103710455,
+					"parameters": {
+						"interval-seconds": "7"
+					}
+				},
+				{
+					"id": "compare-speed",
+					"objectClass": "ball1",
+					"sid": 409932115403380,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"comparison": 1,
+						"speed": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "bat2",
+					"sid": 278791329639804,
+					"parameters": {
+						"object": "PowerUp2",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "PowerUp2",
+					"sid": 157763229144072,
+					"behaviorType": "Bala",
+					"parameters": {
+						"speed": "200"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "PowerUp2",
+					"sid": 274098820107549,
+					"behaviorType": "Bala",
+					"parameters": {
+						"angle": "90"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 588396266608333,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "bat2",
+					"sid": 930510913141995,
+					"parameters": {
+						"object": "PowerUp1",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "PowerUp1",
+					"sid": 789427421160093,
+					"behaviorType": "Bala",
+					"parameters": {
+						"speed": "200"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "PowerUp1",
+					"sid": 237046748544547,
+					"behaviorType": "Bala",
+					"parameters": {
+						"angle": "90"
+					}
+				}
+			],
+			"sid": 395489720916507
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PowerUp1",
+					"sid": 387190856479098,
+					"parameters": {
+						"object": "bat"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "ball1",
+					"sid": 740258905528443,
+					"parameters": {
+						"instance-variable": "Color",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "ball1",
+					"sid": 103996283045973,
+					"parameters": {
+						"animation": "\"verde\"",
+						"from": "current-frame"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "PowerUp1",
+					"sid": 254706526101789
+				},
+				{
+					"id": "destroy",
+					"objectClass": "PowerUp2",
+					"sid": 628777951960882
+				},
+				{
+					"id": "destroy",
+					"objectClass": "PowerUp3",
+					"sid": 475870544463426
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 841529014370714,
+					"parameters": {
+						"variable": "contador",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 450092867823906
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PowerUp2",
+					"sid": 717806735790414,
+					"parameters": {
+						"object": "bat"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "ball1",
+					"sid": 456420044099625,
+					"parameters": {
+						"instance-variable": "Color",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "ball1",
+					"sid": 216109276183245,
+					"parameters": {
+						"animation": "\"azul\"",
+						"from": "current-frame"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "PowerUp1",
+					"sid": 299541460188972
+				},
+				{
+					"id": "destroy",
+					"objectClass": "PowerUp2",
+					"sid": 253148058672566
+				},
+				{
+					"id": "destroy",
+					"objectClass": "PowerUp3",
+					"sid": 249759056201643
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 799735971879281,
+					"parameters": {
+						"variable": "contador",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 663405367550448
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 269043560510211,
+					"parameters": {
+						"variable": "contador",
+						"comparison": 0,
+						"value": "7"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "ball1",
+					"sid": 733222226461490,
+					"parameters": {
+						"animation": "\"blanco\"",
+						"from": "current-frame"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "ball1",
+					"sid": 693957023115422,
+					"parameters": {
+						"instance-variable": "Color",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 676959711793131
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ball1",
+					"sid": 239969747167501,
+					"parameters": {
+						"object": "blocks"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 995272552393385,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "blocks",
+					"sid": 342733684308790
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 864356888081498,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 791774192190867
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "num0",
+					"sid": 988425937123057,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 398087445946528,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "num0",
+					"sid": 251278904655944
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 198807594479665,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 849242732159428
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "num1",
+					"sid": 814856469563627,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 730784070616858,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "num1",
+					"sid": 125171829040601
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 138677248717792,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 496637213315859
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "num2",
+					"sid": 456778526275788,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 376946583393751,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "num2",
+					"sid": 529219147435388
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 803901048978451,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 693701260238170
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "num3",
+					"sid": 389982225700722,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 685661562426653,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "num3",
+					"sid": 672048903392059
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 672619564690528,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 569323566397946
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "num4",
+					"sid": 869025555994220,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 740100589815149,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "num4",
+					"sid": 830703116442155
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 574908824708396,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 903673842658195
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "num5",
+					"sid": 981374460879983,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 428673194563689,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "num5",
+					"sid": 596605558192801
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 665969382091784,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 889428361600850
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "num6",
+					"sid": 677066933716842,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 197310398405325,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "num6",
+					"sid": 154169337404560
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 699188746714880,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 182096349578726
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "num7",
+					"sid": 744150652617803,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 922555772518670,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "num7",
+					"sid": 849920782602891
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 980057100297297,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 745734703123980
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "num8",
+					"sid": 774649616777711,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 155575754198973,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "num8",
+					"sid": 393921037309965
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 569747633399407,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 336124982584160
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "num9",
+					"sid": 471066995775686,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 390761101509286,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "num9",
+					"sid": 464445524523191
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 582625699365919,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 905811406617080
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "simbolo0",
+					"sid": 688483939779601,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 271883677427740,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "simbolo0",
+					"sid": 155469710734662
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 281786496614776,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 583771908809399
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "simbolo1",
+					"sid": 542360592963790,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 950623751262428,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "simbolo1",
+					"sid": 992392085075101
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 372606575637173,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 812543382176934
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "simbolo2",
+					"sid": 309659989673629,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 506207619462874,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "simbolo2",
+					"sid": 849191321848826
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 899895658591028,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 725022629739037
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "simbolo3",
+					"sid": 796365934677304,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 464260352354627,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "simbolo3",
+					"sid": 550104932126598
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 453345455231209,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 392541844610420
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "simbolo4",
+					"sid": 432686698528668,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 636131041484134,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "simbolo4",
+					"sid": 658406404272946
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 483624341490135,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 879580068915598
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "simbolo5",
+					"sid": 419966039133887,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 211014082414369,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "simbolo5",
+					"sid": 519686445263166
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 329737589850766,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 299613975927602
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "simbolo6",
+					"sid": 374241353686466,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 302510074784195,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "simbolo6",
+					"sid": 512222658691480
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 103955120429963,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 286657498574276
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "simbolo7",
+					"sid": 600108883634687,
+					"parameters": {
+						"object": "ball1"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ball1",
+					"sid": 756027357022988,
+					"parameters": {
+						"instance-variable": "Color",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "simbolo7",
+					"sid": 982147237719846
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "bat",
+					"sid": 911333270802013,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 718176227152113
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "bat",
+					"sid": 265352926428212,
+					"parameters": {
+						"instance-variable": "Puntuación",
+						"comparison": 0,
+						"value": "48"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 959863583596799,
+					"parameters": {
+						"layout": "Ganar"
+					}
+				}
+			],
+			"sid": 753610380069868
+		}
+	],
+	"sid": 927873305641354
+}

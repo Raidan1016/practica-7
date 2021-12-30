@@ -1,0 +1,156 @@
+{
+	"name": "Controles eventos",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "ratón",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 129301430704655
+		},
+		{
+			"eventType": "variable",
+			"name": "teclado",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 115340661082698
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "mouse",
+					"sid": 302159445643435,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "botonTeclas"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "botonTeclas",
+					"sid": 678479666770146,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "botonMouse",
+					"sid": 782426674894077,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 440753296569114,
+					"parameters": {
+						"variable": "ratón",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 187877552835613,
+					"parameters": {
+						"variable": "teclado",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 341553564786638
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "mouse",
+					"sid": 339867670728598,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "botonMouse"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "botonMouse",
+					"sid": 375961127746814,
+					"parameters": {
+						"frame-number": "0"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "botonTeclas",
+					"sid": 842336168170946,
+					"parameters": {
+						"frame-number": "0"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 944092787352723,
+					"parameters": {
+						"variable": "ratón",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 224784401468073,
+					"parameters": {
+						"variable": "teclado",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 838054325136687
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "mouse",
+					"sid": 321893078440262,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "botonBack"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 541445821057736,
+					"parameters": {
+						"layout": "Escena 1"
+					}
+				}
+			],
+			"sid": 532275355796758
+		}
+	],
+	"sid": 876210728527389
+}

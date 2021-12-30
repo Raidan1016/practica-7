@@ -1,0 +1,345 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 27602,
+	"name": "Paddle Ball",
+	"runtime": "c3",
+	"useWorker": "dom",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Fondo en mosaico",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Texto",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Teclado",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Partículas",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Restringido a la escena",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Sólido",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "TileMovement",
+			"name": "Movimiento en cuadrícula",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bala",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		}
+	],
+	"uniqueId": "2g1avfqon9c4s",
+	"objectTypes": {
+		"items": [
+			"bat",
+			"ball1",
+			"mouse",
+			"bg",
+			"solid",
+			"letra1Q",
+			"letra2W",
+			"letra3E",
+			"letra4R",
+			"letra5T",
+			"letra6Y",
+			"letra7U",
+			"letra8I",
+			"letra9O",
+			"letra0P",
+			"num1",
+			"num2",
+			"num3",
+			"num4",
+			"num5",
+			"num6",
+			"num7",
+			"num8",
+			"num9",
+			"num0",
+			"letra1A",
+			"letra2S",
+			"letra3D",
+			"letra4F",
+			"letra5G",
+			"letra6H",
+			"letra7J",
+			"letra8K",
+			"letra9L",
+			"letra2Z",
+			"simbolo0",
+			"letra3X",
+			"letra4C",
+			"letra5V",
+			"letra6B",
+			"letra7N",
+			"letra8M",
+			"simbolo1",
+			"simbolo2",
+			"simbolo3",
+			"simbolo4",
+			"simbolo5",
+			"simbolo6",
+			"simbolo7",
+			"PowerUp1",
+			"PowerUp2",
+			"PowerUp3",
+			"bat2",
+			"fondo",
+			"Sprite3",
+			"botonPlay",
+			"bg2",
+			"Audio",
+			"botonControles",
+			"botonMouse",
+			"Texto",
+			"botonBack",
+			"Teclado",
+			"botonTeclas",
+			"Partículas",
+			"Sprite"
+		],
+		"subfolders": []
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"blocks"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Escena 1",
+			"Controles",
+			"Game",
+			"Ganar"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"Game sheet",
+			"Ganar eventos",
+			"Hoja de eventos 1",
+			"Controles eventos"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [
+				{
+					"name": "fondo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 748896224255802
+				},
+				{
+					"name": "ganaste.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 312250618735875
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 179561145019188,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 821950541321012,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-114.png",
+					"type": "image/png",
+					"sid": 567385149881868,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 957312062016574,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 161455498101354,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 329961660227636,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "Donation pack source",
+		"version": "1.0",
+		"author": "Kenney.nl",
+		"authorEmail": "mail@kenney.nl",
+		"authorWebsite": "http://www.kenney.nl",
+		"appId": "com.kenney.paddleball",
+		"pixelRounding": false,
+		"useLoaderLayout": false,
+		"fullscreenMode": "off",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "any",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "file",
+		"cordovaAndroidScheme": "file"
+	},
+	"viewportWidth": 800,
+	"viewportHeight": 480,
+	"firstLayout": null
+}

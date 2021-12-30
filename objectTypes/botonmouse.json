@@ -1,0 +1,49 @@
+{
+	"name": "botonMouse",
+	"plugin-id": "Sprite",
+	"sid": 414475494731702,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 75,
+						"height": 100,
+						"originX": 0.5066666666666667,
+						"originY": 1.11,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7596841,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 75,
+						"height": 100,
+						"originX": 0.5066666666666667,
+						"originY": 1.11,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8274357,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 100866285013289,
+				"name": "normal",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
